@@ -1,0 +1,140 @@
+* {
+	border: 0;
+	margin: 0;
+	user-select: none;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(120deg, #B2D8D8, #66B2B2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: arial;
+	font-size: 1.5rem;
+	color: #f8f8f8;
+}
+
+.container {
+	background-color:#004C4C;
+	box-shadow: 0 0 10px 0  #B2D8D8;
+  padding:2rem;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.row {
+	display: flex;
+}
+
+.light-teal,
+.dark-teal,
+.teal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #004C4C;
+	height: 4.2rem;
+	width: 4.2rem;
+	border-radius: 50%;
+	margin: 0.4rem;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.light-teal {
+	background-color:#66B2B2 ;
+	color: white;
+}
+
+.dark-teal {
+	background-color:#006666 ;
+}
+
+.teal {
+	background-color:#008080 ;
+}
+
+.light-teal:hover {
+	background: #B2D8D8;
+}
+
+.dark-teal:hover {
+	background: #B2D8D8;
+}
+
+.teal:hover {
+	background: #66B2B2;
+}
+
+.click-effect {
+	animation: ripple 0.1s;
+}
+
+@keyframes ripple {
+	to {
+		transform: scale(0.95);
+	}
+}
+
+#zero {
+	width: 9.2rem;
+	border-radius: 0 50px 50px 0;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+}
+
+.display-cover {
+	width: 19.2rem;
+	height: 3rem;
+	margin: 0 0.4rem 1.5rem 0.4rem;
+	text-align: right;
+	font-size: 3rem;
+
+	white-space: nowrap; /*I don't think this is required*/
+	padding-bottom: 0.5rem;
+	overflow-y: hidden;
+	overflow-x: scroll;
+
+	scroll-snap-type: x mandatory;
+}
+
+.display {
+	height: 3rem;
+	display: inline-block;
+	scroll-snap-align: end;
+}
+
+.output {
+	width: 19.2rem;
+	height: 2rem;
+	margin: 0 0.4rem 1.5rem 0.4rem;
+	text-align: right;
+	font-size: 2rem;
+
+	padding-bottom: 0.5rem;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+i {
+	font-size: 1.3rem;
+}
+
+.display-cover::-webkit-scrollbar,
+.output::-webkit-scrollbar {
+	width: 19.2rem;
+	height: 0.2rem;
+}
+::-webkit-scrollbar-track {
+	background:#004C4C ;
+}
+::-webkit-scrollbar-thumb {
+	background: #333333;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #a6a6a6;
+	cursor: pointer;
+}
